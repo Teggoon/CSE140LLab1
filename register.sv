@@ -11,7 +11,7 @@ module register # (parameter N = 8)
   always @ (posedge clk, posedge clear)	begin
 // fill in guts				case({clear,load})
 //   clear   load    out
-// 	   1       0      0
+// 	 1       0      0
 //     1       1      0
 //     0       0     hold
 //     0       1      in   
