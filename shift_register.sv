@@ -7,7 +7,9 @@ module right_shift_register #(parameter width = 16)(
   input             mode,        // arithmetic (0) or logical (1) shift
   output logic [width-1:0] out); // output = shifted or original input
 
-	
+
+  reg signed [width-1:0] temp;
+  
 	always @(posedge clk) 	begin
 // fill in the guts	-- holds or shifts by 1 bit position
 //    enable   mode      out  
@@ -15,7 +17,20 @@ module right_shift_register #(parameter width = 16)(
 //		0       1	     hold
 //		1       1	     logical right shift
 //		1		0	     arithmetic right shift
-    end
+		  if (enable)
+        begin
+            temp = in;
+				if (mode)
+            //logical right shift
+            temp = temp >> 1;
+            else
+            //arithmetic right shift
+            temp = temp >>> 1;
+        end
+
+     out = temp;
+	 
+	 end
 
 endmodule
 
