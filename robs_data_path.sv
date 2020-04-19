@@ -34,14 +34,8 @@ module robs_datapath #(parameter WIDTH = 8)
 // fill in guts
 //    zr = 1 if r is even
 //    zq = 1 if q is divisible by 8
-	always_comb begin
-		if(r[0] == 0)
-			zr = 1;
-		else
-			zr = 0;
-		if((q[2] == 0)&&(q[1] == 0)&&(q[0] == 0))
-			zr = 1;
-		else 
-			zr = 0;	
-	end
+	
+	assign zr = (r[0] == 0 ? 1 : zr);
+   assign zq = (r[0] == 0 && r[1] == 0 && r[2] == 0 ? 1 : zq);
+	
 endmodule 
