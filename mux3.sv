@@ -12,16 +12,16 @@ module mux3 #(parameter WIDTH = 8)
 //  1     0   d2
 //  1     1	  d2
 
+
 if (s[1])
 	assign y = d2;
 else
 	begin
-	if (s[1])
+	if (s[0])
 		assign y = d1;
 	else
 		assign y = d0;
 	end
-
 
 endmodule
 

@@ -14,4 +14,26 @@ module mux5 (input      d0, d1, d2, d3, d4,	 // data in
 //  6	   0
 //  7	   0
 
+always_comb begin
+
+case(s)
+	0:
+		y = d0;
+	1:
+		y = d1;
+	2:
+		y = d2;
+	3:
+		y = d3;
+	4:
+		y = d4;
+	5:
+		y = 0;
+	6:
+		y = 0;
+	7:
+		y = 0;
+endcase
+
+end
 endmodule
