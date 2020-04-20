@@ -11,7 +11,7 @@ module upcreg(
   always_ff @ (posedge clk, posedge reset) begin
 // fill in guts
 //   reset    load_incr	    upc
-//     1		1			 0
+//    1		1			    0
 //	   1		0            0
 //	   0		1		   upc_next
 //	   0	   0          upc+1

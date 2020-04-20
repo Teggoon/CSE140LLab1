@@ -88,7 +88,7 @@ module robertsonstest;
 		expected_product = multiplier*multiplicand;//36;
 		rslt_disp;
 // extreme neg * neg
-        multiplier   = -128;
+      multiplier   = -128;
 		multiplicand = -128;
 		expected_product = multiplier*multiplicand;//16384;
 		rslt_disp;
