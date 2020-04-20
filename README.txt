@@ -7,15 +7,15 @@ Guide for the reader:
 
 In the submission we have included the following files as required,
 
-Screenshot of the ModelSim transcript: 
+Screenshot of the ModelSim transcript: ModelSim transcript.jpg
 
-Screenshot of ModelSim waveform viewer:
+Screenshot of ModelSim waveform viewer: ModelSim waveform viewer.png
 
-Screenshot of top level schematic for the both control block and data path block:
+Screenshot of top level schematic for the both control block and data path block: Top level (control block and data path block).jpg
 
-Screenshot of top level schematic for the control block:
+Screenshot of top level schematic for the control block: Top level (control block).jpg
 
-Screenshot of top level schematic for the data path block:
+Screenshot of top level schematic for the data path block: Top level (data path block).jpg
 
 Note: We have not included a "Screenshot of any remaining unresolved warning messages from ModelSim." as we did have any.
 
