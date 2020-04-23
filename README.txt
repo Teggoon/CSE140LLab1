@@ -17,6 +17,8 @@ Screenshot of top level schematic for the control block: Top level (control bloc
 
 Screenshot of top level schematic for the data path block: Top level (data path block).jpg
 
+Screenshot of threshold debugging: threshold_debug.jpg
+
 Note: We have not included a "Screenshot of any remaining unresolved warning messages from ModelSim." as we did have any.
 
 
@@ -60,7 +62,10 @@ Critical Warning (332148): Timing requirements not met
 Critical Warning (332148): Timing requirements not met
 	Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
 
-5.4  We have identified the threshold to be exactly -127. When the multiplicand and the multiplier both cross the threshold, then we have reached the extreme negative and we encounter the bug.
+5.4  The pattern that we have identified is that each multiplier has a negative threshold multiplicant such that any product with a multiplicant more negative that the threshold will result in a bug. 
+For example, when the multiplier is -1, the threshold is -63. The threshold seems to increase as the multiplier increases. 
+We think this error occurs due to an incorrect handling of the sign extension as the leftmost digits of the computation are correct.
+We reverted the modifications done to the testbench, but we include as screenshot that help us determine our conclusions.
 
 
 	
